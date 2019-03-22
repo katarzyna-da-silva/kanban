@@ -27,13 +27,10 @@ nav {
     li {
         display: flex;
         padding-right: 2vw;
-        margin-top: -6vh;
+
     }
 
-    a { border: 1px solid #47AA50;
-        background-color: #47AA50;
-        width: 3vw;
-        height: 4vh;
+    a {
         text-decoration: none;
         list-style-type: none;
         color: #FFFFFF;
@@ -52,4 +49,22 @@ img {
 .board {
     text-align: center;
     padding-top: 10vh;
+}
+
+#notification {
+    width: 10px;
+    height: 10px;
+    fill: #FFFFFF;
+    position: absolute;
+    border: 1px solid #47AA50;
+    background-color: #47AA50;
+    width: 2vw;
+    height: 4vh;
+    margin-top: -2vw;
+}
+
+#arrow_down {
+    width: 10px;
+    height: 10px;
+    fill: #ffffff;
 }
