@@ -24,8 +24,8 @@ body {
 
 // nawigacja
 nav {
-    box-shadow: 10px 5px 5px #4D4A56;
-    background-color: #5E5A69;
+    box-shadow: 10px 5px 5px #72B1C9;
+    background-color: #C4C6C8;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -99,14 +99,23 @@ nav {
 // prawy
 .right {
 	background-color: #EBEBEB;
-	flex: 7;
+    flex: 7;
+
+    h2 {
+        text-align: center;
+        padding-top: 2vh;
+    }
+    img {
+        padding-left: 18vw;
+        padding-top: 2vh;
+    }
 }
 
 // button
 
 button {
     margin-top: 5vh;
-    margin-left: 35vw;
+    margin-left: 30vw;
     box-shadow: 2px 4px 5px #4D4A56;
     width: 7vw;
     height: 5vh;
