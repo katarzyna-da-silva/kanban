@@ -126,11 +126,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // CREATING COLUMNS
     var todoColumn = new Column('objectives');
-    var doingColumn = new Column('we do :(');
+    var doingColumn = new Column('we do!');
     var doneColumn = new Column('finished');
-
-
-
 
 
 

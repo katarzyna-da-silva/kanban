@@ -1,152 +1,224 @@
 body {
-    background-color: #F1F8FF;
-    margin: 0;
-    padding: 0;
+  background-color: #f1f8ff;
+  margin: 0;
+  padding: 0;
 }
 
-    * {
-        box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    /* Grid */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+.col {
+  border-color: red;
+  padding: 15px;
+}
+.col-1 {
+  flex: 8.333%;
+}
+.col-2 {
+  flex: 16.667%;
+}
+.col-3 {
+  flex: 25%;
+}
+.col-4 {
+  flex: 33.333%;
+}
+.col-5 {
+  flex: 41.667%;
+}
+.col-6 {
+  flex: 50%;
+}
+.col-7 {
+  flex: 58.333%;
+}
+.col-8 {
+  flex: 66.667%;
+}
+.col-9 {
+  flex: 75%;
+}
+.col-10 {
+  flex: 83.333%;
+}
+.col-11 {
+  flex: 91.667%;
+}
+.col-12 {
+  flex: 100%;
+}
 
 // nawigacja
 nav {
-    box-shadow: 10px 5px 5px #72B1C9;
-    background-color: #C4C6C8;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    bottom: 0;
-    height: 70px;
-    width: 100%;
+  box-shadow: 10px 5px 5px #72b1c9;
+  background-color: #c4c6c8;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
 
-    img {
-        margin-left: 20vw;
-        margin-top: 1vh;
-    }
+  img {
+    margin-left: 20vw;
+    margin-top: 1vh;
+  }
 }
 
 // jumbotron
 
 .jumbotron {
-    width: 100%;
-    height: 40vh;
-    padding-top: 22vh;
-    text-align: center;
-    background-image: url("https://pics.tinypic.pl/i/00981/f4fpbzrrd52u.png");
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+  width: 100%;
+  height: 40vh;
+  padding-top: 22vh;
+  text-align: center;
+  background-image: url("https://pics.tinypic.pl/i/00981/f4fpbzrrd52u.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 
-    h1 {
-        margin: 0;
-        font-size: 30px;
-        font-weight: 500;
-        color: #FEF375;
-    }
+  h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fef375;
+  }
 }
 
 // flex :
 .row {
-	display: flex;
-	height: 1500px;
+  display: flex;
+  height: 1500px;
 }
 
 // lewy :
 .left {
-	background-color: #EBEBEB;
-    flex: 3;
+  background-color: #ebebeb;
+  flex: 3;
 
-    img {
-        width: 100%;
-        padding-left: 1vw;
-        padding-top: 2vh;
-    }
+  img {
+    width: 100%;
+    padding-left: 1vw;
+    padding-top: 2vh;
+  }
 }
 
 .left > h1 {
-    color: #8D0E3A;
-    text-align: center;
-    font-size: 2em;
+  color: #8d0e3a;
+  text-align: center;
+  font-size: 2em;
 }
 
 .left > p {
-    text-align: justify;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 16px;
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
 }
 
 .left > h2 {
-    color: #8D0E3A;
-    text-align: center;
-    font-size: 1.5em;
+  color: #8d0e3a;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 // prawy
 
 .right {
-	background-color: #EBEBEB;
-    flex: 7;
+  background-color: #ebebeb;
+  flex: 7;
+  width: 100%;
 
-    h2 {
-        text-align: center;
-        padding-top: 2vh;
-    }
-    img {
-        padding-left: 18vw;
-        padding-top: 2vh;
-    }
+  h2 {
+    text-align: center;
+    padding-top: 2vh;
+  }
+  img {
+    padding-left: 18vw;
+    padding-top: 2vh;
+  }
 }
 
 // button
 
-button {
-    margin-top: 5vh;
-    margin-left: 30vw;
-    box-shadow: 2px 4px 5px #4D4A56;
-    width: 7vw;
-    height: 5vh;
-    border-radius: 8px;
-    background-color: #5E5A69;
-    color: #ffffff;
-    font-size: 1em;
+.create-column {
+  margin-top: 5vh;
+  margin-left: 30vw;
+  box-shadow: 2px 8px 5px #4d4a56;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 6px;
+  background-color: #c5c6c8;
+  color: #ffffff;
+  font-size: 1em;
+  margin-left: 200px;
 }
 
+// kontener kanban :
+.column-container {
+    width: 100%;
+    height: 1200px;
+    background: #c5c6c8;
+  }
 
-// kanban :
+  .column {
+    background: yellow;
+    width: 245px;
+    height: 45vh;
+    position: relative;
+  }
 
 .board {
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: #555555;
-    padding: 40px;
-    margin-top: 10px;
-    max-width: 800px;
-
+  padding: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: blue;
 }
 
-.column-container {
-	display: flex;
-	align-items: flex-start;
-    margin-top: 30px;
-    display: inline;
+.column-title {
+  width: 180px;
+  color: black;
+  background-color: blue;
+}
+.add-card {
+color: red;
 }
 
-.column {
-    color: red;
+.card-description {
+  width: 10vw;
+  height: 150vh;
+  background: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// buttony :
+.add-card {
+  display: inline-block;
+  justify-content: flex-start;
+
+}
+.btn-delete {
+  display: inline-block;
+  justify-content: flex-start;
+
+}
+.column-card-list {
+  display: inline-block;
+  justify-content: flex-start;
 }
