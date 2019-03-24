@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function Column(name) {
         var self = this;
-
         this.id = randomString();
         this.name = name;
         // przy tworzeniu obiektu tworzymy element Node, generale-template wywoluje funkcje ktora pobiera element z html :
@@ -112,18 +111,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     // zdarzenie kliknięcia, aby obsługiwało wrzucanie nowej kolumny do tablicy :
 
-    document.querySelector('#board .create-column').addEventListener('click', function () {
-        var name = prompt('Enter a column name');
-        var column = new Column(name);
-        board.addColumn(column);
-    });
+    //document.querySelector('#board .create-column').addEventListener('click', function () {
+      //  var name = prompt('Enter a column name');
+        //var column = new Column(name);
+        //board.addColumn(column);
+        var buttonColumn = document.querySelector('#board .create-column');
+        buttonColumn.addEventListener('click', function () {
+            var name = prompt('Enter a column name');
+            var column = new Column(name);
+            board.addColumn(column);
 
+    });
     //tworzenie nowych obiektow :
 
     // CREATING COLUMNS
-    var todoColumn = new Column('To do');
-    var doingColumn = new Column('Doing');
-    var doneColumn = new Column('Done');
+    var todoColumn = new Column('objectives');
+    var doingColumn = new Column('we do :(');
+    var doneColumn = new Column('finished');
+
+
+
+
+
 
     // ADDING COLUMNS TO THE BOARD
     board.addColumn(todoColumn);
@@ -137,4 +146,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // ADDING CARDS TO COLUMNS
     todoColumn.addCard(card1);
     doingColumn.addCard(card2);
+
 });

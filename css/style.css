@@ -155,4 +155,27 @@ button {
   color: #ffffff;
   font-size: 1em;
 }
+
+.board {
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: #555555;
+  padding: 40px;
+  margin-top: 10px;
+  max-width: 800px;
+}
+
+.column-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  margin-top: 30px;
+  display: inline;
+}
+
+.column {
+  color: red;
+}
 /*# sourceMappingURL=style.css.map */
