@@ -112,14 +112,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // zdarzenie kliknięcia, aby obsługiwało wrzucanie nowej kolumny do tablicy :
 
     //document.querySelector('#board .create-column').addEventListener('click', function () {
-      //  var name = prompt('Enter a column name');
-        //var column = new Column(name);
-        //board.addColumn(column);
-        var buttonColumn = document.querySelector('#board .create-column');
-        buttonColumn.addEventListener('click', function () {
-            var name = prompt('Enter a column name');
-            var column = new Column(name);
-            board.addColumn(column);
+    //  var name = prompt('Enter a column name');
+    //var column = new Column(name);
+    //board.addColumn(column);
+    var buttonColumn = document.querySelector('#board .create-column');
+    buttonColumn.addEventListener('click', function () {
+        var name = prompt('Enter a column name');
+        var column = new Column(name);
+        board.addColumn(column);
 
     });
     //tworzenie nowych obiektow :
