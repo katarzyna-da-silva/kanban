@@ -11,7 +11,6 @@ body {
 }
 
 .col {
-  border-color: red;
   padding: 15px;
 }
 
@@ -107,14 +106,14 @@ nav img {
   font-size: 1.8rem;
   font-weight: 600;
   color: #2f2b2f;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Source", sans-serif;
   letter-spacing: 3px;
   word-spacing: 5px;
 }
 
 .jumbotron h1:first-letter {
   font-size: 3rem;
-  font-family: "Satisfy", cursive;
+  font-family: "Satisfy", sans-serif;
   transition: 5s;
 }
 
@@ -125,6 +124,7 @@ nav img {
 }
 
 .left {
+  color: #2f2b2f;
   background-color: #ebebeb;
   -ms-flex: 2;
       flex: 2;
@@ -174,7 +174,7 @@ li {
 .right h2 {
   text-align: center;
   padding-top: 2vh;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Source", sans-serif;
   letter-spacing: 2px;
   word-spacing: 3px;
 }
@@ -186,10 +186,10 @@ li {
   width: 10vw;
   height: 5vh;
   border-radius: 6px;
-  background-color: #c5c6c8;
+  background-color: #dfe4ea;
   font-size: 1.2em;
   margin-right: 200px;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Source", sans-serif;
 }
 
 .column-container {
@@ -227,7 +227,7 @@ li {
 .column h3 {
   font-size: 1.2rem;
   text-align: center;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Source", sans-serif;
   text-transform: uppercase;
   line-height: 40px;
   letter-spacing: 4px;
@@ -274,12 +274,12 @@ li {
   height: 4vh;
   border-radius: 2px;
   background-color: #c5c6c8;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Source", sans-serif;
 }
 
 footer {
-  background-color: #252726;
-  color: #fff;
+  background-color: #2f2b2f;
+  color: #c5c6c8;
   margin: 0;
   padding: 5px;
   text-align: center;

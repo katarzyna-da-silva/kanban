@@ -1,7 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro");
 @import url("https://fonts.googleapis.com/css?family=Satisfy");
+
+//fonts :
+
+$fonts-jumbotron: "Satisfy", sans-serif;
+$fonts: "Source", sans-serif;
+
+// colors:
+
+$body-color: #f1f8ff;
+$dark-color: #2f2b2f;
+$flex-color: #ebebeb;
+$kanban-color: #dfe4ea;
+$boxshadow-color: #a4b0be;
+$cards-color: #c5c6c8;
+$color-list: #ced6e0;
+$description-color: #cccccc;
+
+// mixin:
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
 body {
-  background-color: #f1f8ff;
+  background-color: $body-color;
   margin: 0;
   padding: 0;
 }
@@ -11,7 +37,6 @@ body {
 }
 
 .col {
-  border-color: red;
   padding: 15px;
 }
 .col-1 {
@@ -53,8 +78,8 @@ body {
 
 // logo & navi :
 nav {
-  box-shadow: 1px 1px 1px #2f2b2f;
-  background-color: #2f2b2f;
+  box-shadow: 1px 1px 1px $dark-color;
+  background-color: $dark-color;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -84,13 +109,13 @@ nav {
     margin: 0;
     font-size: 1.8rem;
     font-weight: 600;
-    color: #2f2b2f;
-    font-family: "Source Serif Pro", serif;
+    color: $dark-color;
+    font-family: $fonts;
     letter-spacing: 3px;
     word-spacing: 5px;
     &:first-letter {
       font-size: 3rem;
-      font-family: "Satisfy", cursive;
+      font-family: $fonts-jumbotron;
       transition: 5s;
     }
   }
@@ -106,7 +131,8 @@ nav {
 // flex container left :
 
 .left {
-  background-color: #ebebeb;
+  color: $dark-color;
+  background-color: $flex-color;
   flex: 2;
 
   img {
@@ -117,7 +143,7 @@ nav {
 }
 
 .left > h1 {
-  color: #2f2b2f;
+  color: $dark-color;
   text-align: center;
   font-size: 2em;
 }
@@ -133,7 +159,7 @@ nav {
 }
 
 .left > h2 {
-  color: #2f2b2f;
+  color: $dark-color;
   text-align: center;
   font-size: 1.5em;
 }
@@ -147,14 +173,14 @@ li {
 // flex container right:
 
 .right {
-  background-color: #ebebeb;
+  background-color: $flex-color;
   flex: 7;
   width: 100%;
 
   h2 {
     text-align: center;
     padding-top: 2vh;
-    font-family: "Source Serif Pro", serif;
+    font-family: $fonts;
     letter-spacing: 2px;
     word-spacing: 3px;
   }
@@ -165,14 +191,14 @@ li {
 .create-column {
   margin-top: 5vh;
   margin-left: 30vw;
-  box-shadow: 2px 2px 1px #a4b0be;
+  box-shadow: 2px 2px 1px $boxshadow-color;
   width: 10vw;
   height: 5vh;
-  border-radius: 6px;
-  background-color: #c5c6c8;
+  @include border-radius(6px);
+  background-color: $kanban-color;
   font-size: 1.2em;
   margin-right: 200px;
-  font-family: "Source Serif Pro", serif;
+  font-family: $fonts;
 }
 
 // container for kanban :
@@ -188,25 +214,26 @@ li {
 
 // create column for kanban :
 .column {
-  box-shadow: 1px 1px 1px #cccccc;
+  box-shadow: 1px 1px 1px $description-color;
   text-align: center;
   width: 20vw;
-  background: #dfe4ea;
+  background: $kanban-color;
   height: 100%;
   margin: 1vw;
 
   .column-title {
     width: 18vw;
-    background-color: #a4b0be;
+    background-color: $boxshadow-color;
     flex-direction: row;
     position: relative;
     margin-left: 1vw;
     flex-wrap: wrap;
   }
+
   h3 {
     font-size: 1.2rem;
     text-align: center;
-    font-family: "Source Serif Pro", serif;
+    font-family: $fonts;
     text-transform: uppercase;
     line-height: 40px;
     letter-spacing: 4px;
@@ -216,7 +243,7 @@ li {
 
 .column > ul {
   list-style-type: none;
-  background: #ced6e0;
+  background: $color-list;
   font-size: 1rem;
   text-align: left;
   font-weight: 600;
@@ -232,17 +259,18 @@ li {
     margin-left: 247px;
     height: 4vh;
     width: 1.4vw;
-    border-radius: 2px;
-    background-color: #c5c6c8;
+    @include border-radius(2px);
+    background-color: $cards-color;
   }
 }
+
 // removed buttons a new card :
 
 .removed {
   height: 4vh;
   width: 1.5vw;
-  border-radius: 4px;
-  background-color: #c5c6c8;
+  @include border-radius(4px);
+  background-color: $cards-color;
 }
 
 // descritpion cards :
@@ -250,23 +278,25 @@ li {
 .card-description {
   margin: 5px;
   padding: 15px;
-  background-color: #cccccc;
+  background-color: $description-color;
   width: 14vw;
 }
 
-// add new cards button : 
+// add new cards button :
+
 .add-card {
   width: 7vw;
   height: 4vh;
-  border-radius: 2px;
-  background-color: #c5c6c8;
-  font-family: "Source Serif Pro", serif;
+  @include border-radius(2px);
+  background-color: $cards-color;
+  font-family: $fonts;
 }
 
 // footer :
+
 footer {
-  background-color: #252726;
-  color: #fff;
+  background-color: $dark-color;
+  color: $cards-color;
   margin: 0;
   padding: 5px;
   text-align: center;
