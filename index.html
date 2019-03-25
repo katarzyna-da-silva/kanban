@@ -53,15 +53,14 @@
                 <h2>
                         Create your strategies, look it very easy!
                 </h2>
-                    <img src="images/kanban22.png" alt="photo" />
                 <div id="board" class="board">
                     <button class="create-column">Create board</button>
                     <div class="column-container"></div>
                     <script id="column-template" type="x-tmpl-mustache">
                         <div class="column">
-                    <h2 class="column-title">{{ name }}</h2>
+                    <h3 class="column-title">{{ name }}</h3>
                     <ul id={{ id }} class="column-card-list"></ul>
-                    <button class="btn-delete">X</button>
+                    <button class="btn-delete removed">X</button>
                     <button class="add-card">Add a new card</button>
                 </div>
             </script>

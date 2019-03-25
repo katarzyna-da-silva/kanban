@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (event.target.classList.contains('add-card')) {
                 //pobieramy od uzytkownika nazwe kolumny ktora tworzymy :
-                self.addCard(new Card(prompt("Enter the name of the card")));
+                self.addCard(new Card(prompt("here you can name your card:")));
             }
         });
     }
@@ -137,11 +137,12 @@ document.addEventListener('DOMContentLoaded', function () {
     board.addColumn(doneColumn);
 
     // CREATING CARDS
-    var card1 = new Card('New task');
-    var card2 = new Card('Create kanban boards');
-
+    var card1 = new Card('Create your tasks');
+    var card2 = new Card('And move it');
+    var card3 = new Card('You can also delete it');
     // ADDING CARDS TO COLUMNS
     todoColumn.addCard(card1);
     doingColumn.addCard(card2);
+    doneColumn.addCard(card3);
 
 });
