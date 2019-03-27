@@ -1,3 +1,14 @@
+
+function generateTemplate(name, data, basicElement) {
+    var template = document.getElementById(name).innerHTML;
+    var element = document.createElement(basicElement || 'div');
+
+    Mustache.parse(template);
+    element.innerHTML = Mustache.render(template, data);
+
+    return element;
+}
+
 // API
 
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
@@ -17,12 +28,13 @@ fetch(baseUrl + '/board', {
     });
 
 
-// implementacja funkcji setUpColumns , stworzenie wszystkich koolumn i przypiecie do tablicy
+// implementacja funkcji setUpColumns , stworzenie wszystkich kolumn i przypiecie do tablicy
 
 function setupColumns(columns) {
     columns.forEach(function (column) {
         var col = new Column(column.id, column.name);
         board.addColumn(col);
+        setupCards(col, column.cards);
     });
 }
 
@@ -35,23 +47,3 @@ function setupCards(col, cards) {
     });
 }
 
-// OGÓLNA FUNKCJA
-function randomString() {
-    var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ'.split();
-    var str = '',
-        i;
-    for (i = 0; i < 10; i++) {
-        str += chars[Math.floor(Math.random() * chars.length)];
-    }
-    return str;
-}
-
-function generateTemplate(name, data, basicElement) {
-    var template = document.getElementById(name).innerHTML;
-    var element = document.createElement(basicElement || 'div');
-
-    Mustache.parse(template);
-    element.innerHTML = Mustache.render(template, data);
-
-    return element;
-}

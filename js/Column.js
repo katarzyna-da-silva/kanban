@@ -2,11 +2,12 @@
 
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
-    'X-Client-Id': 'X-Client-Id',
-    'X-Auth-Token': 'X-Auth-Token'
+    'X-Client-Id': '3694',
+    'X-Auth-Token': '1c397bdf3fa1ac97d70065bc832ed42e'
 };
 
 function Column(id, name) {
+    var self = this;
 
     this.id = id;
     this.name = name || 'No name given';
@@ -39,6 +40,7 @@ function Column(id, name) {
                 .then(function (resp) {
                     var card = new Card(resp.id, cardName);
                     self.addCard(card);
+                    console.log('addCard function attr', card)
                 });
         }
     });
