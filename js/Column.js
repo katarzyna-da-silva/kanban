@@ -1,6 +1,7 @@
 // API
 
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
+var prefix = "https://cors-anywhere.herokuapp.com/";
 var myHeaders = {
     'X-Client-Id': '3694',
     'X-Auth-Token': '1c397bdf3fa1ac97d70065bc832ed42e'
@@ -29,7 +30,7 @@ function Column(id, name) {
             data.append('name', cardName);
             data.append('bootcamp_kanban_column_id', self.id);
 
-            fetch(baseUrl + '/card', {
+            fetch(prefix + baseUrl + '/card', {
                     method: 'POST',
                     headers: myHeaders,
                     body: data,

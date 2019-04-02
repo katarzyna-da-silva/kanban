@@ -1,6 +1,7 @@
 // API
 
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
+var prefix = "https://cors-anywhere.herokuapp.com/";
 var myHeaders = {
     'X-Client-Id': '3694',
     'X-Auth-Token': '1c397bdf3fa1ac97d70065bc832ed42e'
@@ -28,7 +29,7 @@ Card.prototype = {
     removeCard: function () {
         var self = this;
 
-        fetch(baseUrl + '/card/' + self.id, {
+        fetch(prefix + baseUrl + '/card/' + self.id, {
                 method: 'DELETE',
                 headers: myHeaders
             })
